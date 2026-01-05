@@ -61,13 +61,17 @@ def git():
     choice = get_char().lower()
 
     if choice == "p":
+        clear_screen()
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "commit", "-m", "upd"])
         subprocess.run(["git", "push"])
+        print("\n[home] ", end="", flush=True)
         get_char()
         
     elif choice == "l":
+        clear_screen()
         subprocess.run(["git", "pull"])
+        print("\n[home] ", end="", flush=True)
         get_char()
         
 def main():
