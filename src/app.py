@@ -8,6 +8,9 @@ def clear_screen():
 
     sys.stdout.write("\033[H\033[2J")
     sys.stdout.flush()
+    
+def reboot():
+    os.execv(sys.executable, [sys.executable] + sys.argv)
 
 def show_menu(menu_lines):
 
@@ -50,7 +53,7 @@ def git():
     )
     print(result.stdout)
     
-    print("\n[home] [p]-push [l]-pull ", end="", flush=True)
+    print("\n[home] [p]-push [d]-pull ", end="", flush=True)
     choice = get_char().lower()
 
     if choice == "p":
@@ -61,11 +64,12 @@ def git():
         print("\n[home] ", end="", flush=True)
         get_char()
         
-    elif choice == "l":
+    elif choice == "d":
         clear_screen()
         subprocess.run(["git", "pull"])
-        print("\n[home] ", end="", flush=True)
+        print("\n[restart] ", end="", flush=True)
         get_char()
+        reboot()
         
 def main():
     
