@@ -41,6 +41,8 @@ def about():
     
 def git():
     
+    subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL)
+    
     result = subprocess.run(
         ["git", "status"],
         text=True,
