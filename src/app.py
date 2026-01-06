@@ -9,14 +9,13 @@ def clear_screen():
     sys.stdout.write("\033[H\033[2J")
     sys.stdout.flush()
 
-def spinner():
+def power_off():
     
-    spinner = ["⠋ ", "⠙ ", "⠹ ", "⠸ ", "⠼ ", "⠴ ", "⠦ ", "⠧ ", "⠇ ", "⠏ "]
-    #spinner = ["\\ ", "| ", "/ ", "- "]
-    for spin in spinner:
+    progress = ["/// ", "//  ", "/   ", "    "]
+    for line in progress:
         clear_screen()
-        print(spin, end="", flush=True)
-        time.sleep(0.05)
+        print(line, end="", flush=True)
+        time.sleep(0.1)
         clear_screen()
         
 def show_menu(menu_lines):
@@ -81,8 +80,8 @@ def main():
         with open("menu.txt", "r", encoding="utf-8") as f:
             menu_lines = f.read().splitlines()
     except FileNotFoundError:
-        menu_lines = ["no file."]
-    
+        menu_lines = ["no menu.txt file."]
+
     while True:
 
         clear_screen()
@@ -101,8 +100,7 @@ def main():
             git()
             
         elif choice == "q":
-            for i in range(2):
-                spinner()
+            power_off()
             break
 
 if __name__ == "__main__":
