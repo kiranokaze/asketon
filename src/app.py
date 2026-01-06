@@ -11,11 +11,12 @@ def clear_screen():
 
 def spinner():
     
-    spinner = ["| ", "/ ", "- ", "\\ "]
+    spinner = ["⠋ ", "⠙ ", "⠹ ", "⠸ ", "⠼ ", "⠴ ", "⠦ ", "⠧ ", "⠇ ", "⠏ "]
+    #spinner = ["\\ ", "| ", "/ ", "- "]
     for spin in spinner:
         clear_screen()
         print(spin, end="", flush=True)
-        time.sleep(0.1)
+        time.sleep(0.05)
         clear_screen()
         
 def show_menu(menu_lines):
@@ -100,7 +101,7 @@ def main():
             git()
             
         elif choice == "q":
-            for i in range(3):
+            for i in range(2):
                 spinner()
             break
 
