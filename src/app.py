@@ -5,7 +5,7 @@ import sys
 import subprocess
 
 def clear_screen():
-    
+
     sys.stdout.write("\033[H\033[2J")
     sys.stdout.flush()
 
