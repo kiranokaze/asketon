@@ -3,6 +3,7 @@ import tty
 import termios
 import sys
 import subprocess
+import os
 
 def clear_screen():
 
@@ -44,6 +45,8 @@ def about():
     
 def git():
     
+    print("fetching updates...")
+    
     subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL)
     
     result = subprocess.run(
@@ -51,12 +54,14 @@ def git():
         text=True,
         capture_output=True
     )
+    
+    clear_screen()
     print(result.stdout)
     
-    print("\n[home] [p]-push [d]-pull ", end="", flush=True)
+    print("\n[home] [u]-push [d]-pull ", end="", flush=True)
     choice = get_char().lower()
 
-    if choice == "p":
+    if choice == "u":
         clear_screen()
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "commit", "-m", "upd"])
