@@ -9,15 +9,6 @@ def clear_screen():
     sys.stdout.write("\033[H\033[2J")
     sys.stdout.flush()
 
-def power_off():
-    
-    progress = ["/// ", "//  ", "/   ", "    "]
-    for line in progress:
-        clear_screen()
-        print(line, end="", flush=True)
-        time.sleep(0.1)
-        clear_screen()
-        
 def show_menu(menu_lines):
 
     for i, line in enumerate(menu_lines):
@@ -100,7 +91,7 @@ def main():
             git()
             
         elif choice == "q":
-            power_off()
+            time.sleep(0.5)
             break
 
 if __name__ == "__main__":
