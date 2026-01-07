@@ -1,7 +1,7 @@
 import sys
 import os
 from ui import read_key, clear_screen
-from actions import git, workout, about, diary, main_screen
+from actions import git, workout, about, diary, menu
 
 ACTIONS = {
     "a": about.run,
@@ -18,7 +18,7 @@ def run():
     
     while True:
 
-        main_screen.run()
+        menu.run()
         key = read_key().lower()
         clear_screen()
             

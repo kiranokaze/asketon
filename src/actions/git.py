@@ -19,6 +19,7 @@ def run():
     choice = read_key().lower()
 
     if choice == "u":
+        
         clear_screen()
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "commit", "-m", "upd"])
@@ -27,8 +28,9 @@ def run():
         read_key()
         
     elif choice == "d":
+        
         clear_screen()
-        subprocess.run(["git", "pull"])
+        subprrocess.run(["git", "pull"])
         print("\n[enter] ", end="", flush=True)
         read_key()
         reboot()
