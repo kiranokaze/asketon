@@ -2,10 +2,17 @@ import sys
 import subprocess
 from ui import clear_screen, read_key
 
-def run():
+def git_fetch():
     
-    print("fetching updates...")
+    clear_screen()
+    
+    print("fetching updates.. ", end="", flush=True)
+    
     subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL)
+    
+    clear_screen()
+    
+def git_status():
     
     result = subprocess.run(
         ["git", "status"],
@@ -13,24 +20,38 @@ def run():
         capture_output=True
     )
     
-    clear_screen()
     print(result.stdout)
+    
+def git_push():
+    
+    subprocess.run(["git", "add", "."])
+    subprocess.run(["git", "commit", "-m", "upd"])
+    subprocess.run(["git", "push"])
+    
+def git_pull():
+    
+        subprrocess.run(["git", "pull"])
+    
+def run():
+    
+    git_fetch()
+    
+    git_status()
+    
     print("\n[home] [u]-push [d]-pull ", end="", flush=True)
     choice = read_key().lower()
 
     if choice == "u":
         
         clear_screen()
-        subprocess.run(["git", "add", "."])
-        subprocess.run(["git", "commit", "-m", "upd"])
-        subprocess.run(["git", "push"])
+        git_push()
         print("\n[home] ", end="", flush=True)
         read_key()
         
     elif choice == "d":
         
         clear_screen()
-        subprrocess.run(["git", "pull"])
-        print("\n[enter] ", end="", flush=True)
+        git_pull()
+        print("\n[reboot] ", end="", flush=True)
         read_key()
         reboot()

@@ -11,14 +11,6 @@ def run():
     
     clear_screen()
     
-    print("fetching updates.. ", end="", flush=True)
-    
-    subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL)
-    
-    subprocess.run(["git", "pull"], stdout=subprocess.DEVNULL)
-    
-    clear_screen()
-    
     try:
         menu_lines = MAIN_FILE.read_text(encoding="utf-8").splitlines()
         
