@@ -1,16 +1,17 @@
+import os
 import sys
 import subprocess
 from ui import clear_screen, read_key
 
 def git_fetch():
     
-    clear_screen()
-    
     print("fetching updates.. ", end="", flush=True)
     
-    subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL)
-    
-    clear_screen()
+    subprocess.run(
+        ["git", "fetch"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL
+    )
     
 def git_status():
     
@@ -19,9 +20,17 @@ def git_status():
         text=True,
         capture_output=True
     )
-    
     print(result.stdout)
     
+def has_remote_commits() -> bool:
+    
+    result = subprocess.run(
+        ["git", "status"],
+        text=True,
+        capture_output=True
+    )
+    return "behind" in result.stdout
+
 def git_push():
     
     subprocess.run(["git", "add", "."])
@@ -30,28 +39,24 @@ def git_push():
     
 def git_pull():
     
-        subprrocess.run(["git", "pull"])
+    print("\nupdating.. ", end="", flush=True)
+    subprrocess.run(["git", "pull"])
+        
+def reboot():
+    
+    os.execv(sys.executable, [sys.executable] + sys.argv)
     
 def run():
     
-    git_fetch()
-    
+    clear_screen()
     git_status()
     
-    print("\n[home] [u]-push [d]-pull ", end="", flush=True)
+    print("\n[home] [p]-push ", end="", flush=True)
     choice = read_key().lower()
 
-    if choice == "u":
+    if choice == "p":
         
         clear_screen()
         git_push()
         print("\n[home] ", end="", flush=True)
         read_key()
-        
-    elif choice == "d":
-        
-        clear_screen()
-        git_pull()
-        print("\n[reboot] ", end="", flush=True)
-        read_key()
-        reboot()

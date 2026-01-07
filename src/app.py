@@ -1,5 +1,3 @@
-import sys
-import os
 from ui import read_key, clear_screen
 from actions import git, workout, about, diary, menu
 
@@ -9,12 +7,20 @@ ACTIONS = {
     "w": workout.run,
     "d": diary.run,
 }
-
-def reboot():
-    
-    os.execv(sys.executable, [sys.executable] + sys.argv)
         
 def run():
+    
+    clear_screen()
+    
+    try:
+        git.git_fetch()
+        
+        if git.has_remote_commits():
+            git.git_pull()
+            git.reboot()
+            
+    except Exception:
+        pass
     
     while True:
 
