@@ -1,4 +1,3 @@
-import os
 import sys
 import time
 import subprocess
@@ -59,10 +58,6 @@ def git_pull():
     
     print("\nupdating.. ", end="", flush=True)
     subprrocess.run(["git", "pull"])
-        
-def reboot():
-    
-    os.execv(sys.executable, [sys.executable] + sys.argv)
     
 def run():
     

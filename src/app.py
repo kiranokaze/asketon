@@ -17,7 +17,6 @@ def run():
         
         if git.has_remote_commits():
             git.git_pull()
-            git.reboot()
             
     except Exception:
         pass

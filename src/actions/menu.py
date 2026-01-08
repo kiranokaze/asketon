@@ -23,4 +23,4 @@ def run():
             print(line, end="", flush=True)
         else:
             print(line)
-            time.sleep(0.015)
+            time.sleep(0.03)
