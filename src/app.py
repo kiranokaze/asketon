@@ -29,6 +29,7 @@ def run():
         clear_screen()
             
         if key == "q":
+            git.git_push()
             break
             
         action = ACTIONS.get(key)
