@@ -61,7 +61,7 @@ def run():
     choice = read_key().lower()
 
     if choice == "p":
-        
+
         clear_screen()
         git_push()
 
