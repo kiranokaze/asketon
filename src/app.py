@@ -30,7 +30,6 @@ def run():
         
         print("enter the first letter.. ", end="", flush=True)
         key = read_key().lower()
-        clear_screen()
             
         if key == "q":
             
@@ -42,6 +41,7 @@ def run():
             
         action = ACTIONS.get(key)
         if action:
+            clear_screen()
             action()
             
         menu.run()
