@@ -44,7 +44,10 @@ def git_push():
         return
     
     subprocess.run(["git", "add", "."])
-    subprocess.run(["git", "commit", "-m", "upd"])
+    subprocess.run(
+        ["git", "commit", "-m", "upd"],
+        stdout=subprocess.DEVNULL
+    )
     subprocess.run(
         ["git", "push"],
         stdout=subprocess.DEVNULL,
