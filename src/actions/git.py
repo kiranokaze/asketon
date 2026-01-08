@@ -32,7 +32,19 @@ def has_remote_commits() -> bool:
     )
     return "behind" in result.stdout
 
+def has_local_changes() -> bool:
+    
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True,
+        text=True
+    )
+    return bool(result.stdout.strip())
+
 def git_push():
+    
+    if not has_local_changes():
+        return
     
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", "upd"])
