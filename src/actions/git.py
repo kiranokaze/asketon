@@ -36,6 +36,10 @@ def git_push():
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", "upd"])
     subprocess.run(["git", "push"])
+
+    print("uploaded to github. ", end="", flush=True)
+    time.sleep(0.2)
+    clear_screen()
     
 def git_pull():
     

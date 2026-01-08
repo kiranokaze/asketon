@@ -30,9 +30,6 @@ def run():
             
         if key == "q":
             git.git_push()
-            print("uploaded to github. ", end="", flush=True)
-            time.sleep(0.2)
-            clear_screen()
             break
             
         action = ACTIONS.get(key)
