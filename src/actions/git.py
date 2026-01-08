@@ -64,4 +64,4 @@ def run():
         
         clear_screen()
         git_push()
-        read_key()
+
