@@ -1,7 +1,7 @@
 import sys
 import time
 import subprocess
-from ui import clear_screen, read_key
+from ui import clear_screen, read_key, clear_last_line
 
 def git_fetch():
     
@@ -42,6 +42,9 @@ def git_push():
     
     if not has_local_changes():
         return
+        
+    clear_last_line()
+    print("sync.. ", end="", flush=True)
     
     subprocess.run(["git", "add", "."])
     subprocess.run(

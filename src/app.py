@@ -33,8 +33,6 @@ def run():
             
         if key == "q":
             
-            clear_last_line()
-            print("sync.. ",end="", flush=True)
             git.git_push()
             clear_screen()
             break
