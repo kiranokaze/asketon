@@ -34,7 +34,7 @@ def run():
         clear_screen()
             
         if key == "q":
-            #git.git_push()
+            git.git_push()
             clear_screen()
             break
             
