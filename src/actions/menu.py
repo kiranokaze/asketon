@@ -2,6 +2,7 @@ import sys
 import time
 from pathlib import Path
 from ui import clear_screen
+from acions import git
 import subprocess
 
 DATA_DIR = Path("data")
@@ -23,4 +24,4 @@ def run():
             print(line, end="", flush=True)
         else:
             print(line)
-            time.sleep(0.04)
+            time.sleep(0.015)
