@@ -5,8 +5,6 @@ from ui import clear_screen, read_key
 
 def git_fetch():
     
-    print("fetching updates.. ", end="", flush=True)
-    
     subprocess.run(
         ["git", "fetch"],
         stdout=subprocess.DEVNULL,
@@ -47,17 +45,19 @@ def git_push():
     
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", "upd"])
-    subprocess.run(["git", "push"])
-
-    clear_screen()
-
-    print("uploaded to github. ", end="", flush=True)
-    time.sleep(1)
+    subprocess.run(
+        ["git", "push"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL
+    )
     
 def git_pull():
     
-    print("\nupdating.. ", end="", flush=True)
-    subprrocess.run(["git", "pull"])
+    subprrocess.run(
+        ["git", "pull"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL
+    )
     
 def run():
     
@@ -71,4 +71,4 @@ def run():
 
         clear_screen()
         git_push()
-
+        clear_screen()

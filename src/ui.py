@@ -17,3 +17,8 @@ def read_key():
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return char
+    
+def clear_last_line():
+    sys.stdout.write("\033[G")
+    sys.stdout.write("\033[2K")
+    sys.stdout.flush()

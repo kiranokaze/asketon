@@ -1,4 +1,4 @@
-from ui import read_key, clear_screen
+from ui import read_key, clear_screen, clear_last_line
 from actions import git, workout, about, diary, menu
 
 ACTIONS = {
@@ -11,6 +11,9 @@ ACTIONS = {
 def run():
     
     clear_screen()
+    menu.run()
+    
+    print("sync.. ",end="", flush=True)
     
     try:
         git.git_fetch()
@@ -21,20 +24,25 @@ def run():
     except Exception:
         pass
     
+    clear_last_line()
+    
     while True:
+        
+        print("enter the first letter.. ", end="", flush=True)
 
-        menu.run()
         key = read_key().lower()
         clear_screen()
             
         if key == "q":
-            git.git_push()
+            #git.git_push()
             clear_screen()
             break
             
         action = ACTIONS.get(key)
         if action:
             action()
+            
+        menu.run()
 
 if __name__ == "__main__":
     run()
