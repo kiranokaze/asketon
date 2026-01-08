@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 import subprocess
 from ui import clear_screen, read_key
 
