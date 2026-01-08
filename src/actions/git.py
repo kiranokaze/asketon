@@ -53,7 +53,7 @@ def git_push():
     clear_screen()
 
     print("uploaded to github. ", end="", flush=True)
-    time.sleep(0.5)
+    time.sleep(1)
     
 def git_pull():
     
