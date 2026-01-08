@@ -29,7 +29,6 @@ def run():
     while True:
         
         print("enter the first letter.. ", end="", flush=True)
-
         key = read_key().lower()
         clear_screen()
             
