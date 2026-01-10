@@ -13,7 +13,7 @@ def run():
     clear_screen()
     menu.run()
     
-    print("sync.. ",end="", flush=True)
+    print("checking for updates.. ",end="", flush=True)
     
     try:
         git.git_fetch()

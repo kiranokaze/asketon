@@ -2,7 +2,6 @@ import sys
 import time
 from pathlib import Path
 from ui import clear_screen
-from actions import git
 import subprocess
 
 DATA_DIR = Path("data")
