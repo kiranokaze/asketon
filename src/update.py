@@ -1,5 +1,6 @@
 from actions import git
 from ui import clear_last_line
+import time
 
 
 def update():
@@ -15,3 +16,4 @@ def update():
 		pass
     
 	clear_last_line()
+	time.sleep(0.1)
