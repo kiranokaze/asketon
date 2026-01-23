@@ -61,7 +61,7 @@ def run():
 		for key, (name, label) in EXERCISES.items():
 			value = read_number(name)
 			print(f"{key} | {label} - {value}\n")
-
+		print("\n" * 10)
 		print("\n[home]  [1] [2] [3] ", end="", flush=True)
         
 		choice = read_key().lower()
