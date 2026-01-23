@@ -2,7 +2,7 @@ from pathlib import Path
 from ui import clear_screen, read_key
 import sqlite3
 
-DB_PATH = "questoku.db"
+DB_PATH = Path("questoku.db")
 
 EXERCISES = {
 	1: ("pullups", "pullups"),
