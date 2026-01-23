@@ -37,7 +37,7 @@ def run():
 		clear_screen()
 		view_diary()
 		
-		print("[home] [add] [edit] ", end="", flush=True)
+		print("[home]  [add] [edit] ", end="", flush=True)
 		choice = read_key().lower()
 		clear_screen()
 		

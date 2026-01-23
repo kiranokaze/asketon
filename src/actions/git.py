@@ -70,7 +70,7 @@ def run():
     clear_screen()
     git_status()
     
-    print("\n[home] [p]-push ", end="", flush=True)
+    print("\n[home]  [p]-push ", end="", flush=True)
     choice = read_key().lower()
 
     if choice == "p":

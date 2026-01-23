@@ -62,7 +62,7 @@ def run():
 			value = read_number(name)
 			print(f"{key} | {label} - {value}\n")
 
-		print("\n[h] Home | [1] [2] [3]")
+		print("\n[home]  [1] [2] [3]")
         
 		choice = read_key().lower()
         
