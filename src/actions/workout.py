@@ -75,9 +75,3 @@ def run():
 				add_reps(choice_int)
 		except ValueError:
 			continue
-
-if __name__ == "__main__":
-    run()
-
-	
-		
