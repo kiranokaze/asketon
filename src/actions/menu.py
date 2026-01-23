@@ -1,11 +1,8 @@
-import sys
 import time
 from pathlib import Path
 from ui import clear_screen
-import subprocess
 
-DATA_DIR = Path("data")
-MAIN_FILE = DATA_DIR / "menu.txt"
+MAIN_FILE = Path("menu.txt")
 
 def run():
     
