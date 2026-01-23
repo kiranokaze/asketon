@@ -1,5 +1,6 @@
 from ui import read_key, clear_screen, clear_last_line
 from actions import git, workout, about, diary, menu
+from update import update
 
 ACTIONS = {
     "a": about.run,
@@ -13,18 +14,7 @@ def run():
     clear_screen()
     menu.run()
     
-    print("checking for updates.. ",end="", flush=True)
-    
-    try:
-        git.git_fetch()
-        
-        if git.has_remote_commits():
-            git.git_pull()
-            
-    except Exception:
-        pass
-    
-    clear_last_line()
+    update()
     
     while True:
         

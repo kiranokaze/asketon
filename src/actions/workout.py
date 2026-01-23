@@ -2,7 +2,8 @@ from pathlib import Path
 from ui import clear_screen, read_key
 import sqlite3
 
-DB_PATH = Path("questoku.db")
+BASE_DIR = Path(__file__).parent
+DB_PATH = BASE_DIR / "questoku.db"
 
 EXERCISES = {
 	1: ("pullups", "pullups"),
@@ -61,7 +62,7 @@ def run():
 		for key, (name, label) in EXERCISES.items():
 			value = read_number(name)
 			print(f"{key} | {label} - {value}\n")
-		print("\n" * 10)
+		print("\n" * 11)
 		print("\n[home]  [1] [2] [3] ", end="", flush=True)
         
 		choice = read_key().lower()
