@@ -5,9 +5,9 @@
 
 
 
-       tasks     finance     diary
+       diary     finance     stats
 
-       stats     workout     about
+       tasks     workout     about
 
 
                   quit_
