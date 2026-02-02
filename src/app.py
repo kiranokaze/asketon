@@ -18,7 +18,7 @@ def run():
     
     while True:
         
-        print("enter the first letter.. ", end="", flush=True)
+        print("◈ ", end="", flush=True)
         key = read_key().lower()
             
         if key == "q":
