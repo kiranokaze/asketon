@@ -7,7 +7,7 @@ DATA_DIR = Path("data")
 DIARY_FILE = DATA_DIR / "diary.txt"
 
 def view_diary():
-	print("\n" * 20)
+	clear_screen()
 	if DIARY_FILE.exists():
 		print(DIARY_FILE.read_text())
 	else:
