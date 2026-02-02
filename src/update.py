@@ -16,4 +16,3 @@ def update():
 		pass
     
 	clear_last_line()
-	time.sleep(0.1)
