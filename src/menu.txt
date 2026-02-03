@@ -7,8 +7,9 @@ asketon
 │  ├─ [t]asks
 │  └─ [f]inance
 └─ sys
-   ├─ [s]tats  [g]it
-   └─ [q]uit   [a]bout
-
+   ├─ [s]tats
+   ├─ [a]bout
+   ├─ [q]uit
+   └─ [g]it
 
 
