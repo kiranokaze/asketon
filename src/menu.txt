@@ -4,12 +4,14 @@ asketon
 │  ├─ [w]orkout
 │  └─ [d]iary
 ├─ work
-│  ├─ [t]asks
-│  └─ [f]inance
+│  ├─ [f]inance
+│  └─ [t]asks
 └─ sys
    ├─ [s]tats
    ├─ [a]bout
    ├─ [q]uit
    └─ [g]it
+
+
 
 

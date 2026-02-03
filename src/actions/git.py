@@ -44,7 +44,7 @@ def git_push():
         return
         
     clear_last_line()
-    print("push ", end="", flush=True)
+    print("push", end="", flush=True)
     
     subprocess.run(["git", "add", "."])
     subprocess.run(
