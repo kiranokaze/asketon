@@ -1,16 +1,11 @@
-
-
-        [  A S K E T O N  ]
-
-
-    diary     finance     stats
-
-    tasks     workout     about
-
-               quit_
-
-                git
-
-
-
-
+  [A] S K E T O N
+│
+├── finance
+├── workout
+├── tasks
+├── diary
+├── stats
+├── about
+├── quit
+└── git
+    
