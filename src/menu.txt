@@ -1,14 +1,14 @@
-  [A] S K E T O N
+asketon
 
-├── finance
-├── workout
-├── tasks
-├── diary
-├── stats
-├── about
-├── quit
-└── git
-    
+├─ self
+│  ├─ [w]orkout
+│  └─ [d]iary
+├─ work
+│  ├─ [t]asks
+│  └─ [f]inance
+└─ sys
+   ├─ [s]tats  [g]it
+   └─ [q]uit   [a]bout
 
 
 
