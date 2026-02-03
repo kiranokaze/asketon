@@ -1,15 +1,17 @@
 asketon
-├─ num
-│  ├─ [f]inance
-│  └─ [w]orkout
-├─ text
-│  ├─ [d]iary
-│  └─ [t]asks
-└─ sys
-   ├─ [s]tats
-   ├─ [a]bout
-   ├─ [q]uit
-   └─ [g]it
+├── mtr
+│   ├── [f]inance
+│   └── [w]orkout
+├── txt
+│   ├── [d]iary
+│   └── [t]asks
+├── ops
+│   ├── [s]tat
+│   ├── [v]er
+│   └── [g]it
+└── ctl
+    └── [q]
+
 
 
 

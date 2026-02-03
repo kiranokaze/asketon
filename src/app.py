@@ -1,9 +1,9 @@
 from ui import read_key, clear_screen, clear_last_line
-from actions import git, workout, about, diary, menu
+from actions import git, workout, version, diary, menu
 from update import update
 
 ACTIONS = {
-    "a": about.run,
+    "v": version.run,
     "g": git.run,
     "w": workout.run,
     "d": diary.run,
