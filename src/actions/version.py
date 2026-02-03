@@ -2,9 +2,10 @@ from ui import read_key
 
 def run():
     
-    for i in range(7):
+    for i in range(6):
         print("")
-        
+    
+    print("                           v0.1")
     print("  https://github.com/kiranokaze ", end="", flush=True)
       
     read_key()
