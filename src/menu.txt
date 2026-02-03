@@ -1,5 +1,5 @@
- ASKETON | v0.1
-┌──────────────
+asketon
+
 ├─ self
 │  ├─ [w]orkout
 │  └─ [d]iary
