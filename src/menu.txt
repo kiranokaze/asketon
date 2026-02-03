@@ -1,5 +1,5 @@
-asketon
 
+asketon
 ├─ self
 │  ├─ [w]orkout
 │  └─ [d]iary
@@ -11,7 +11,6 @@ asketon
    ├─ [a]bout
    ├─ [q]uit
    └─ [g]it
-
 
 
 
