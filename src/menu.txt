@@ -1,9 +1,9 @@
 asketon
-├─ self
-│  ├─ [w]orkout
-│  └─ [d]iary
-├─ work
+├─ num
 │  ├─ [f]inance
+│  └─ [w]orkout
+├─ text
+│  ├─ [d]iary
 │  └─ [t]asks
 └─ sys
    ├─ [s]tats
