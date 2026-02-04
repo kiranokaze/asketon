@@ -9,7 +9,7 @@ asketon
 │   ├── stat
 │   ├── ver
 │   └── git
-└── ctl
+└── sys
     └── q
 
 
