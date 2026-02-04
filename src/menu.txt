@@ -1,16 +1,16 @@
 asketon
 ├── mtr
-│   ├── [f]inance
-│   └── [w]orkout
+│   ├── finance
+│   └── workout
 ├── txt
-│   ├── [d]iary
-│   └── [t]asks
+│   ├── diary
+│   └── tasks
 ├── ops
-│   ├── [s]tat
-│   ├── [v]er
-│   └── [g]it
+│   ├── stat
+│   ├── ver
+│   └── git
 └── ctl
-    └── [q]
+    └── q
 
 
 
