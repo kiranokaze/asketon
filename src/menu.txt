@@ -1,14 +1,14 @@
 asketon
 ├── mtr
-│   ├── finance
-│   └── workout
+│   ├── f inance
+│   └── w orkout
 ├── txt
-│   ├── diary
-│   └── tasks
+│   ├── d iary
+│   └── t asks
 ├── ops
-│   ├── stat
-│   ├── ver
-│   └── git
+│   ├── s tat
+│   ├── v er
+│   └── g it
 └── sys
     └── q
 
