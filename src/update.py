@@ -1,10 +1,8 @@
 from actions import git
 from ui import clear_last_line
-import time
-
 
 def update():
-	print("fetch * ",end="", flush=True)
+	print("git fetch \ ",end="", flush=True)
     
 	try:
 		git.git_fetch()
