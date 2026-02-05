@@ -1,12 +1,17 @@
 import tty
 import sys
 import termios
+import time
 
 def clear_screen():
-
+	
     sys.stdout.write("\033[H\033[2J")
     sys.stdout.flush()
-
+    
+def quit():
+	
+	time.sleep(0.3)
+	
 def read_key():
     
     fd = sys.stdin.fileno()
@@ -17,8 +22,4 @@ def read_key():
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return char
-    
-def clear_last_line():
-    sys.stdout.write("\033[G")
-    sys.stdout.write("\033[2K")
-    sys.stdout.flush()
+

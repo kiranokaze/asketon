@@ -7,6 +7,9 @@ MAIN_FILE = Path("menu.txt")
 def run():
     
     clear_screen()
+    print("[a]", end="", flush=True)
+    time.sleep(0.3)
+    print("sketon")
     
     try:
         menu_lines = MAIN_FILE.read_text(encoding="utf-8").splitlines()

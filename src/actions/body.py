@@ -2,7 +2,7 @@ from pathlib import Path
 from ui import clear_screen, read_key
 import sqlite3
 
-DB_PATH = ("questoku.db")
+DB_PATH = Path("questoku.db")
 
 EXERCISES = {
 	1: ("pullups", "pullups"),
@@ -41,8 +41,7 @@ def add_reps(choice_key: int):
 	
 	name, label = EXERCISES[choice_key]
     
-	print("\n")
-	print(f"how strong are you.. _{label.lower()} > ", end="", flush=True)
+	print(f"\nnum of {label.lower()} > ", end="", flush=True)
 
 	value = input().strip()
 	if not value.isdigit():
@@ -60,7 +59,7 @@ def run():
 		clear_screen()
 		for key, (name, label) in EXERCISES.items():
 			value = read_number(name)
-			print(f"{key} {label} - {value}")
+			print(f"{label} - {value}")
 		print("\n\n[home]  [1] [2] [3] ", end="", flush=True)
         
 		choice = read_key().lower()

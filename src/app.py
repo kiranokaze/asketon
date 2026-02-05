@@ -1,4 +1,4 @@
-from ui import read_key, clear_screen, clear_last_line
+from ui import read_key, clear_screen, quit
 from actions import sync, body, version, diary, menu
 
 ACTIONS = {
@@ -19,6 +19,7 @@ def run():
             
         if key == "q":
             clear_screen()
+            quit()
             break
             
         action = ACTIONS.get(key)

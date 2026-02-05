@@ -1,7 +1,7 @@
 import sys
 import time
 import subprocess
-from ui import clear_screen, read_key, clear_last_line
+from ui import clear_screen, read_key
 
 def git_fetch():
     
@@ -29,7 +29,7 @@ def git_push():
     
 def git_pull():
     
-    subprrocess.run(["git", "pull"])
+    subprocess.run(["git", "pull"])
     
     print("\n[home] ", end="", flush=True)
     read_key()
