@@ -16,7 +16,7 @@ def git_status():
     )
     print(result.stdout)
     
-    print("\n[home]  [s]-push [l]-pull", end="", flush=True)
+    print("\n[home]  [p]-push [d]-pull ", end="", flush=True)
 
 def git_push():
 
@@ -42,12 +42,12 @@ def run():
     
     choice = read_key().lower()
 
-    if choice == "s":
+    if choice == "p":
 
         clear_screen()
         git_push()
         
-    elif choice == "l":
+    elif choice == "d":
         
         clear_screen()
         git_pull()
