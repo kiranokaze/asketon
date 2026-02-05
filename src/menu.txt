@@ -1,9 +1,13 @@
 asketon
 
 
-[workout] [finance] [diary] [tasks]
+[diary]  [body]
 
-[stat] [ver] [git] [q]
+[wallet] [todo]
+
+[stat]   [ver]
+
+[quit]   [git]
 
 
 
