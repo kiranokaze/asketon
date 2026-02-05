@@ -1,13 +1,9 @@
 asketon
 
 
-[diary]  [body]
+[diary] [body] [wallet] [todo]
 
-[wallet] [todo]
-
-[stat]   [ver]
-
-[quit]   [git]
+[stat] [ver] [git] [quit]
 
 
 
