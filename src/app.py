@@ -1,11 +1,11 @@
 from ui import read_key, clear_screen, clear_last_line
-from actions import git, workout, version, diary, menu
+from actions import git, body, version, diary, menu
 from update import update
 
 ACTIONS = {
     "v": version.run,
     "g": git.run,
-    "b": workout.run,
+    "b": body.run,
     "d": diary.run,
 }
         

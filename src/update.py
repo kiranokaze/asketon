@@ -4,7 +4,7 @@ import time
 
 
 def update():
-	print("fetch",end="", flush=True)
+	print("fetch * ",end="", flush=True)
     
 	try:
 		git.git_fetch()
