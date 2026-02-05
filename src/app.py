@@ -5,7 +5,7 @@ from update import update
 ACTIONS = {
     "v": version.run,
     "g": git.run,
-    "w": workout.run,
+    "b": workout.run,
     "d": diary.run,
 }
         
