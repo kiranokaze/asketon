@@ -10,7 +10,7 @@ def clear_screen():
     
 def quit():
 	
-	time.sleep(0.3)
+	time.sleep(0.1)
 	
 def read_key():
     
