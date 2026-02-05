@@ -3,7 +3,7 @@
 
 [diary] [body] [wallet] [todo]
 
-[stat] [ver] [git] [quit]
+[sync] [ver] [quit]
 
 
-
+>

@@ -1,10 +1,9 @@
 from ui import read_key, clear_screen, clear_last_line
-from actions import git, body, version, diary, menu
-from update import update
+from actions import sync, body, version, diary, menu
 
 ACTIONS = {
     "v": version.run,
-    "g": git.run,
+    "s": sync.run,
     "b": body.run,
     "d": diary.run,
 }
@@ -14,16 +13,11 @@ def run():
     clear_screen()
     menu.run()
     
-    update()
-    
     while True:
-        
-        print("> ", end="", flush=True)
+
         key = read_key().lower()
             
         if key == "q":
-            
-            git.git_push()
             clear_screen()
             break
             
