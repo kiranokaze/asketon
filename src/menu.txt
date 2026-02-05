@@ -1,14 +1,14 @@
 asketon
 ├── mtr
-│   ├── f inance
-│   └── w orkout
+│   ├── f.inance
+│   └── w.orkout
 ├── txt
-│   ├── d iary
-│   └── t asks
+│   ├── d.iary
+│   └── t.asks
 ├── ops
-│   ├── s tat
-│   ├── v er
-│   └── g it
+│   ├── s.tat
+│   ├── v.er
+│   └── g.it
 └── sys
     └── q
 
