@@ -60,7 +60,7 @@ def run():
 		clear_screen()
 		for key, (name, label) in EXERCISES.items():
 			value = read_number(name)
-			print(f"{key} | {label} - {value}\n")
+			print(f"{key} {label} - {value}")
 		print("\n[home]  [1] [2] [3] ", end="", flush=True)
         
 		choice = read_key().lower()
