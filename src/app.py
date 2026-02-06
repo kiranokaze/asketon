@@ -1,11 +1,10 @@
 from ui import read_key, clear_screen, quit
-from actions import sync, body, version, diary, menu
+from actions import sync, workout, version, menu
 
 ACTIONS = {
     "v": version.run,
     "s": sync.run,
-    "b": body.run,
-    "d": diary.run,
+    "w": workout.run
 }
         
 def run():

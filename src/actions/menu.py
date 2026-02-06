@@ -11,7 +11,7 @@ def run():
 	time.sleep(0.2)
 	print("sketon\n\n")
 	time.sleep(0.02)
-	print("[diary] [body] [wallet] [todo]\n")
+	print("[finance] [tasks] [workout]\n")
 	time.sleep(0.02)
 	print("[sync] [ver] [quit]\n\n")
 	time.sleep(0.02)
