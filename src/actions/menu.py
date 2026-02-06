@@ -8,7 +8,7 @@ def run():
     
     clear_screen()
     print("[a]", end="", flush=True)
-    time.sleep(0.2)
+    time.sleep(0.1)
     print("sketon")
     
     try:
@@ -23,4 +23,4 @@ def run():
             print(line, end="", flush=True)
         else:
             print(line)
-            time.sleep(0.015)
+            time.sleep(0.02)
