@@ -9,8 +9,8 @@ def clear_screen():
     sys.stdout.flush()
     
 def quit():
-	
-	time.sleep(0.1)
+    
+    time.sleep(0.2)
 	
 def read_key():
     

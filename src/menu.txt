@@ -1,8 +1,0 @@
-
-
-[diary] [body] [wallet] [todo]
-
-[sync] [ver] [quit]
-
-
-> 

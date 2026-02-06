@@ -3,8 +3,7 @@ from pathlib import Path
 import subprocess
 from datetime import datetime, timedelta
 
-DATA_DIR = Path("data")
-DIARY_FILE = DATA_DIR / "diary.txt"
+DIARY_FILE = Path("diary.txt")
 
 def view_diary():
 	clear_screen()

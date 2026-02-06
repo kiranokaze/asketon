@@ -1,8 +1,7 @@
 from pathlib import Path
 from ui import clear_screen, read_key
+from config import DB_PATH
 import sqlite3
-
-DB_PATH = Path("questoku.db")
 
 EXERCISES = {
 	1: ("pullups", "pullups"),
