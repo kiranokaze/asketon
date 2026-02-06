@@ -2,6 +2,23 @@ import sys
 import time
 import subprocess
 from ui import clear_screen, read_key
+import socket
+import os
+
+def fix_network():
+    print("[checking network...]", end=" ", flush=True)
+    try:
+        socket.gethostbyname('github.com')
+        print("OK")
+    except socket.gaierror:
+        print("DNS FAIL")
+        print("[patching /etc/resolv.conf...]", end="")
+        try:
+            with open('/etc/resolv.conf', 'w') as f:
+                f.write("nameserver 8.8.8.8\nnameserver 1.1.1.1\n")
+            print("DONE")
+        except PermissionError:
+            print("FAILED (no root)")
 
 def git_fetch():
     
@@ -36,7 +53,7 @@ def git_pull():
 
 def run():
     
-    clear_screen()
+    fix_network()
     git_fetch()
     git_status()
     

@@ -5,7 +5,8 @@ from ui import clear_screen
 MAIN_FILE = Path("menu.txt")
 
 def run():
-    
+	
+	print("\n" * 30)
 	clear_screen()
 	print("[a]", end="", flush=True)
 	time.sleep(0.2)

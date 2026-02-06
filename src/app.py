@@ -1,4 +1,4 @@
-from ui import read_key, clear_screen, quit
+import ui
 from actions import sync, workout, version, menu
 
 ACTIONS = {
@@ -9,24 +9,23 @@ ACTIONS = {
         
 def run():
     
-    clear_screen()
-    menu.run()
+    ui.alt_screen_in()
     
     while True:
+        
+        menu.run()
 
-        key = read_key().lower()
+        key = ui.read_key().lower()
             
         if key == "q":
-            clear_screen()
-            quit()
+            ui.clear_screen()
+            ui.alt_screen_out()
             break
             
         action = ACTIONS.get(key)
         if action:
-            clear_screen()
+            ui.clear_screen()
             action()
-            
-        menu.run()
 
 if __name__ == "__main__":
     run()
