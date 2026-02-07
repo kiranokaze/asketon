@@ -9,7 +9,7 @@ def fix_network():
     print("[checking network...]", end=" ", flush=True)
     try:
         socket.gethostbyname('github.com')
-        print("OK")
+        print("0K")
     except socket.gaierror:
         print("DNS FAIL")
         print("[patching /etc/resolv.conf...]", end="")
