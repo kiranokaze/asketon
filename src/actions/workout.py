@@ -21,6 +21,13 @@ def init_db():
 	conn.commit()
 	conn.close()
 	
+def view():
+	
+	for key, (name, label) in EXERCISES.items():
+			value = read_number(name)
+			print(f"{label} - {value}")
+	print("\n[q] [1] [2] [3] ", end="", flush=True)
+	
 def read_number(name: str) -> int:
   
 	conn = sqlite3.connect(DB_PATH)
@@ -56,14 +63,11 @@ def run():
 	while True:
 		
 		clear_screen()
-		for key, (name, label) in EXERCISES.items():
-			value = read_number(name)
-			print(f"{label} - {value}")
-		print("\n\n[home]  [1] [2] [3] ", end="", flush=True)
+		view()
         
 		choice = read_key().lower()
         
-		if choice == "h":
+		if choice == "q":
 			break
         
 		try:
