@@ -11,9 +11,6 @@ def clear_screen():
 def alt_screen_in():
     
     print("\033[?1049h\033[H", end="")
-    
-    sys.stdout.write("\033[?1000l\033[?1002l\033[?1003l\033[?1006l")
-    sys.stdout.flush()
 
 def alt_screen_out():
     

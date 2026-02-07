@@ -9,7 +9,7 @@ ACTIONS = {
         
 def run():
     
-    ui.alt_screen_in()
+    #ui.alt_screen_in()
     
     while True:
         
@@ -19,7 +19,7 @@ def run():
             
         if key == "q":
             ui.clear_screen()
-            ui.alt_screen_out()
+            #ui.alt_screen_out()
             break
             
         action = ACTIONS.get(key)
